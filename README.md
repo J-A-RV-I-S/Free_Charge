@@ -55,7 +55,7 @@ Add this two lines for Internet permissions and notification permissions.
   <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 ```
 
-To prevent an app from using cleartext network traffic, Add this line in <Application> tag.
+To prevent an app from using cleartext network traffic, Add this line in Application tag.
 
 ```bash
   android:usesCleartextTraffic="true"
