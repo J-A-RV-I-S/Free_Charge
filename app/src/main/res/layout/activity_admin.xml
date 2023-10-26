@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/admin_panel"
+    tools:context=".Activity.Admin">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginRight="40dp"
+        android:hint="ID"
+        app:hintTextColor="@color/blue"
+        app:boxStrokeColor="@color/blue"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/black"
+        app:startIconDrawable="@drawable/ic_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:hint="Price"
+        app:hintTextColor="@color/blue"
+        app:boxStrokeColor="@color/blue"
+        app:endIconMode="clear_text"
+        app:helperText="e.g. ₹ 199*"
+        app:helperTextTextColor="@color/black"
+        app:startIconDrawable="@drawable/ic_price">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:hint="Data"
+        app:hintTextColor="@color/blue"
+        app:boxStrokeColor="@color/blue"
+        app:endIconMode="clear_text"
+        app:helperText="e.g. 1 GB/Day , 2 GB/Day , Unlimited *"
+        app:helperTextTextColor="@color/black"
+        app:startIconDrawable="@drawable/ic_data">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:hint="Validity"
+        app:hintTextColor="@color/blue"
+        app:boxStrokeColor="@color/blue"
+        app:endIconMode="clear_text"
+        app:helperText="e.g. 10days, 20days, Unlimited *"
+        app:helperTextTextColor="@color/black"
+        app:startIconDrawable="@drawable/ic_validity">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_validity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btn_insert"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:text="Save"
+            android:textColor="@color/blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/blue" />
+
+        <Button
+            android:id="@+id/btn_update"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="60dp"
+            android:ems="10"
+            android:text="Update"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_insert"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:strokeColor="@color/blue"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="60dp"
+            android:ems="10"
+            android:text="Delete"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_display"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:strokeColor="@color/blue" />
+
+        <Button
+            android:id="@+id/btn_display"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:text="View"
+            android:textColor="@color/blue"
+            app:layout_constraintEnd_toEndOf="@+id/btn_insert"
+            app:layout_constraintStart_toStartOf="@+id/btn_insert"
+            app:layout_constraintTop_toBottomOf="@+id/btn_insert"
+            app:strokeColor="@color/blue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

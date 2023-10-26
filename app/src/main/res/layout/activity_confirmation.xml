@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/otp_page"
+    tools:context=".Activity.Confirmation">
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginRight="25dp"
+        android:hint="Enter Mobile Number"
+        app:hintTextColor="@color/blue"
+        app:boxStrokeColor="@color/blue"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:endIconMode="clear_text"
+        app:prefixText="+91"
+        app:prefixTextColor="@color/black"
+        app:startIconDrawable="@drawable/ic_call">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="10" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_otp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:text="Get otp"
+        android:ems="10"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:textColor="@color/blue"
+        app:strokeColor="@color/blue"/>
+
+</LinearLayout>
